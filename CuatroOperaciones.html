@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cuatro Operaciones</title>
+	<link rel="stylesheet" href="style.css"/>
+	<script src="node_modules/mathjax/es5/tex-chtml.js"></script>
+	<script src="script.js"></script>
+</head>
+<body>
+	<h1>Cuatro Operaciones</h1>
+	<!--Pregunta 1-->
+	<div class="pregunta">Si \((a+b+c)^2=225\) ; Hallar: \(\overline{abc}+\overline{bca}+\overline{cab}\)</div>
+	<div class="retroalimentacion" id="mensaje1"></div>
+	<form>
+	<div class="respuesta"><input type="radio" name="respuesta1" value="a" id="a"><label for="a">1665</label></div>
+	<div class="respuesta"><input type="radio" name="respuesta1" value="b" id="b"><label for="b">1555</label></div>
+	<div class="respuesta"><input type="radio" name="respuesta1" value="c" id="c"><label for="c">1565</label></div>
+	<div class="respuesta"><input type="radio" name="respuesta1" value="d" id="d"><label for="d">1666</label></div>
+	<div class="respuesta"><input type="radio" name="respuesta1" value="e" id="e"><label for="e">1556</label></div>
+	<input type="button" id="boton1" value="Enviar respuesta" onclick="verificarRespuesta('respuesta1','b','mensaje1')">
+	</form>
+	<!--Pregunta 2-->
+	<div class "pregunta">\(A=1^2+2^2+3^2+4^2+...+15^2\)<br>\(B=1\times2+2\times3+3\times4+...+15\times16\)<br> \( Calcular: A+B\)</div>
+	<div class="retroalimentacion" id="mensaje2"></div>
+	<form>
+	<div class="respuesta"><input type="radio" name="respuesta2" value="a" id="a"><label for="a">2600</label></div>
+	<div class="respuesta"><input type="radio" name="respuesta2" value="b" id="b"><label for="b">2700</label></div>
+	<div class="respuesta"><input type="radio" name="respuesta2" value="c" id="c"><label for="c">2800</label></div>
+	<div class="respuesta"><input type="radio" name="respuesta2" value="d" id="d"><label for="d">2900</label></div>
+	<div class="respuesta"><input type="radio" name="respuesta2" value="e" id="e"><label for="e">3000</label></div>
+	<input type="button" id="boton2" value="Enviar respuesta" onclick="verificarRespuesta('respuesta2','a','mensaje2')">
+	</form>
+	<!--Pregunta 3-->
+	<div class="pregunta">La suma del minuendo, sustraendo y diferencia de una sustracción es 19456 y el minuendo es el cuádruplo del sustraendo. Hallar el sustraendo.</div>
+	<div class="retroalimentacion" id="mensaje3"></div>
+	<form>
+	<div class="respuesta"><input type="radio" name="respuesta3" value="a" id="a"><label for="a">9728</label></div>
+	<div class="respuesta"><input type="radio" name="respuesta3" value="b" id="b"><label for="b">4864</label></div>
+	<div class="respuesta"><input type="radio" name="respuesta3" value="c" id="c"><label for="c">2432</label></div>
+	<div class="respuesta"><input type="radio" name="respuesta3" value="d" id="d"><label for="d">1216</label></div>
+	<div class="respuesta"><input type="radio" name="respuesta3" value="e" id="e"><label for="e">3432</label></div>
+	<input type="button" id="boton3" value="Enviar respuesta" onclick="verificarRespuesta('respuesta3','d','mensaje3')">
+	</form>
+</body>
+</html>

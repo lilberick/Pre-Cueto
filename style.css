@@ -1,0 +1,108 @@
+body {
+  /*background: linear-gradient(to bottom right, #ffffff, #e6e6e6);*/
+  background: #ffffff;
+}
+/* Estilos para el título de la página */
+h1 {
+  font-size: 2em;
+  text-align: center;
+  margin: 1em 0;
+}
+/* Estilos para las preguntas y respuestas */
+h2{
+	color: #333333;
+	text-align: left;
+}
+p {
+  font-size: 1.2em;
+  margin: 1em 0;
+}
+
+label {
+  font-size: 1.2em;
+  margin-left: 0.5em;
+}
+
+input[type="radio"] {
+  margin-left: 1em;
+}
+
+/* Estilos para el botón */
+input[type="button"] {
+  display: block;
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  font-size: 1.2em;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+input[type="button"]:hover {
+  background-color: #0062cc;
+}
+
+/* Estilos para el mensaje de respuesta */
+p[id^="mensaje"] {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 1em 0;
+}
+#fondo_correcto {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00FF00;
+    z-index: 9999;
+    display: none; /* Ocultar el elemento por defecto */
+}
+
+#fondo_incorrecto {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FF0000;
+    z-index: 9999;
+    display: none; /* Ocultar el elemento por defecto */
+}
+.silabo ul{
+	display: none;
+}
+.silabo ul li a{
+	color: #007acc;
+}
+.silabo.active ul{
+	display: block;
+}
+.fondo-marca-agua {
+  background-image: url('imagenes/logo1.png');
+  opacity: 0.8; /* ajusta la opacidad para que sea una marca de agua */
+  background-repeat: no-repeat; /* para que la imagen se repita en todo el fondo */
+  background-position: center center;
+  background-size: 30%;
+  background-attachment: fixed;
+}
+.banner {
+	background-color: #0556af; 
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.banner img {
+	height: 50px;
+	margin-right: 20px;
+}
+.banner h1 {
+	font-size: 36px;
+	margin: 0;
+}
+.banner h1 a{
+	text-decoration: none;
+	color: white;
+}
