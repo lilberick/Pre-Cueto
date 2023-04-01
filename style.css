@@ -1,9 +1,9 @@
-body {
+body{
   /*background: linear-gradient(to bottom right, #ffffff, #e6e6e6);*/
   background: #ffffff;
 }
 /* Estilos para el título de la página */
-h1 {
+h1{
   font-size: 2em;
   text-align: center;
   margin: 1em 0;
@@ -13,20 +13,17 @@ h2{
 	color: #333333;
 	text-align: left;
 }
-p {
+p{
   font-size: 1.2em;
   margin: 1em 0;
 }
-
 label {
   font-size: 1.2em;
   margin-left: 0.5em;
 }
-
 input[type="radio"] {
   margin-left: 1em;
 }
-
 /* Estilos para el botón */
 input[type="button"] {
   display: inline-block;
@@ -38,11 +35,9 @@ input[type="button"] {
   color: #fff;
   cursor: pointer;
 }
-
 input[type="button"]:hover {
   background-color: #0062cc;
 }
-
 /* Estilos para el mensaje de respuesta */
 p[id^="mensaje"] {
   font-size: 1.2em;
@@ -59,7 +54,6 @@ p[id^="mensaje"] {
     z-index: 9999;
     display: none; /* Ocultar el elemento por defecto */
 }
-
 #fondo_incorrecto {
     position: fixed;
     top: 0;
@@ -92,7 +86,8 @@ p[id^="mensaje"] {
 	padding: 10px;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: center; /*INDICE*/
+	justify-content: space-between;*/ /*EXAMEN*/
 }
 .banner img {
 	height: 50px;
@@ -105,4 +100,12 @@ p[id^="mensaje"] {
 .banner h1 a{
 	text-decoration: none;
 	color: white;
+}
+.timer-container {
+  display: flex;
+  align-items: center;
+}
+#timerTotal {
+  margin-right: 10px;
+  color: #ffffff
 }
