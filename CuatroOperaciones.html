@@ -12,18 +12,8 @@
 		<img src="imagenes/logo1.png" alt="Mi logo">
 		<h1><a href="https://carloscueto.edu.pe">Cuatro Operaciones</a></h1>
 	</div>
-	<!--Pregunta 1-->
-	<p id="timer1">Tiempo transcurrido: 00:00:00</p>
-	<div class="pregunta">Si \((a+b+c)^2=225\) ; Hallar: \(\overline{abc}+\overline{bca}+\overline{cab}\)</div>
-	<div class="retroalimentacion" id="mensaje1"></div>
-	<form>
-	<div class="respuesta"><input type="radio" name="respuesta1" value="a" id="a"><label for="a">1665</label></div>
-	<div class="respuesta"><input type="radio" name="respuesta1" value="b" id="b"><label for="b">1555</label></div>
-	<div class="respuesta"><input type="radio" name="respuesta1" value="c" id="c"><label for="c">1565</label></div>
-	<div class="respuesta"><input type="radio" name="respuesta1" value="d" id="d"><label for="d">1666</label></div>
-	<div class="respuesta"><input type="radio" name="respuesta1" value="e" id="e"><label for="e">1556</label></div>
-	<input type="button" id="boton1" value="Verificar" onclick="verificarRespuesta('respuesta1','b','mensaje1')">
-	<input type="button" id="cron1" value="Cronometro" onclick="cronometro('cron1','timer1')">
-	</form>
+	<!--input type="button" id="cambiar" value="Cambiar Problema" onclick="CambiarProblema()"-->
+	<input type="button" id="cambiar" value="Cambiar Problema" onclick="cargarProblemas()">
+	<div id="problema"></div>
 </body>
 </html>
