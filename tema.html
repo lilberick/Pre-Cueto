@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" href="style.css"/>
+	<script src="node_modules/mathjax/es5/tex-chtml.js"></script>
+	<script src="script.js"></script>
+	<script>
+	  document.addEventListener('DOMContentLoaded', () => {
+	    const titulo = new URLSearchParams(window.location.search).get('titulo');
+	    //document.getElementById('titulo-banner').textContent = titulo ? titulo : "";
+		document.getElementById('titulo-banner').textContent = titulo ? titulo.replace(/-/g, " ") : "";
+
+	  });
+	</script>
+	<style>#titulo-banner{color: white;}</style>
+</head>
+<body>
+
+	<div class="banner">
+	  <img src="imagenes/logo1.png" alt="Mi logo">
+	  <h1 id="titulo-banner"><a href="https://carloscueto.edu.pe">texto</a></h1>
+	</div>
+	<!--input type="button" id="cambiar" value="Cambiar Problema" onclick="CambiarProblema()"-->
+	<input type="button" id="cambiar" value="Cambiar Problema" onclick="cargarProblemas()">
+	<div id="problema"></div>
+</body>

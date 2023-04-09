@@ -88,7 +88,8 @@ function cargarProblemas(){
   fetch('problemas.csv') // Cambia "problemas.csv" por la ruta a tu archivo CSV
     .then(response => response.text())
     .then(data => {
-      const problemas = data.split('\n').map(row => row.split(','));
+      //const problemas = data.split('\n').map(row => row.split('","'));
+	  const problemas = data.split('\n').map(row => row.split('","').map(val => val.replace(/"/g, '')));
       const problemaAleatorio = problemas[Math.floor(Math.random() * problemas.length)];
       const [enunciado, respuesta,o1,o2,o3,o4,o5] = problemaAleatorio;
       const problemaDiv = document.getElementById('problema');
