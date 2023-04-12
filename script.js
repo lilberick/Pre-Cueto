@@ -85,24 +85,28 @@ function CambiarProblema(){
 `;
 }*/
 function cargarProblemas(){
-  fetch('problemas.csv') // Cambia "problemas.csv" por la ruta a tu archivo CSV
+  const urlParams = new URLSearchParams(window.location.search);
+  const titulo = urlParams.get('titulo');
+  fetch('problemas.csv')
     .then(response => response.text())
     .then(data => {
       //const problemas = data.split('\n').map(row => row.split('","'));
 	  const problemas = data.split('\n').map(row => row.split('","').map(val => val.replace(/"/g, '')));
-      const problemaAleatorio = problemas[Math.floor(Math.random() * problemas.length)];
-      const [enunciado, respuesta,o1,o2,o3,o4,o5] = problemaAleatorio;
+	  const problemasSeleccionados = problemas.filter(row => row[1] === titulo);
+	  //const problemaAleatorio = problemasSeleccionados[Math.floor(Math.random() * problemasSeleccionados.length)];
+      const problemaAleatorio = problemasSeleccionados[Math.floor(Math.random() * problemasSeleccionados.length)];
+      const [curso,tema,enunciado, respuesta,o1,o2,o3,o4,o5] = problemaAleatorio;
       const problemaDiv = document.getElementById('problema');
       problemaDiv.innerHTML = `
 	  	<p id="timer">Tiempo transcurrido: 00:00:00</p>
         <div class="pregunta" id="enunciado">${enunciado}</div>
 		<div class="retroalimentacion" id="mensaje"></div>
         <form>
-          <div class="respuesta"><input type="radio" name="respuesta" value=${o1}><label>${o1}</label></div>
-          <div class="respuesta"><input type="radio" name="respuesta" value=${o2}><label>${o2}</label></div>
-          <div class="respuesta"><input type="radio" name="respuesta" value=${o3}><label>${o3}</label></div>
-          <div class="respuesta"><input type="radio" name="respuesta" value=${o4}><label>${o4}</label></div>
-          <div class="respuesta"><input type="radio" name="respuesta" value=${o5}><label>${o5}</label></div>
+          <div class="respuesta"><input type="radio" name="respuesta" value="${o1}"><label>${o1}</label></div>
+          <div class="respuesta"><input type="radio" name="respuesta" value="${o2}"><label>${o2}</label></div>
+          <div class="respuesta"><input type="radio" name="respuesta" value="${o3}"><label>${o3}</label></div>
+          <div class="respuesta"><input type="radio" name="respuesta" value="${o4}"><label>${o4}</label></div>
+          <div class="respuesta"><input type="radio" name="respuesta" value="${o5}"><label>${o5}</label></div>
           <input type="button" id="boton" value="Verificar" onclick="verificarRespuesta('${respuesta}','mensaje')">
 		  <input type="button" id="cron" value="Cronometro" onclick="cronometro('cron','timer')">
         </form>
