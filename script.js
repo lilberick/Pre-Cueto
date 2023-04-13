@@ -99,7 +99,7 @@ function cargarProblemas(){
       const problemaDiv = document.getElementById('problema');
       problemaDiv.innerHTML = `
 	  	<p id="timer">Tiempo transcurrido: 00:00:00</p>
-        <div class="pregunta" id="enunciado">${enunciado}</div>
+        <div class="pregunta">${enunciado}</div>
 		<div class="retroalimentacion" id="mensaje"></div>
         <form>
           <div class="respuesta"><input type="radio" name="respuesta" value="${o1}"><label>${o1}</label></div>
@@ -111,7 +111,7 @@ function cargarProblemas(){
 		  <input type="button" id="cron" value="Cronometro" onclick="cronometro('cron','timer')">
         </form>
       `;
-      MathJax.typeset([document.getElementById('enunciado')]);
+		MathJax.typeset();
     });
 }
 /*creador: lilberick*/
