@@ -75,9 +75,17 @@ p[id^="mensaje"] {
 }
 .fondo-marca-agua {
   background-image: url('imagenes/logo1.png');
-  opacity: 0.8; /* ajusta la opacidad para que sea una marca de agua */
+  opacity: 1; /* ajusta la opacidad para que sea una marca de agua */
   background-repeat: no-repeat; /* para que la imagen se repita en todo el fondo */
   background-position: center center;
+  background-size: 30%;
+  background-attachment: fixed;
+}
+.lilberick{
+  background-image: url('imagenes/lilberick-cara.png');
+  opacity: 1; /* ajusta la opacidad para que sea una marca de agua */
+  background-repeat: no-repeat; /* para que la imagen se repita en todo el fondo */
+  background-position: center right;
   background-size: 30%;
   background-attachment: fixed;
 }
@@ -99,7 +107,18 @@ p[id^="mensaje"] {
 }
 .banner h1 a{
 	text-decoration: none;
-	color: white;
+	color: #f2f2f2;
+}
+.banner p {
+    margin: 0;
+    font-size: 1.5em;
+    color: white;
+}
+.banner p a {
+    color: white;
+}
+.banner p a:hover {
+    text-decoration: underline;
 }
 .timer-container {
   display: flex;
@@ -109,3 +128,4 @@ p[id^="mensaje"] {
   margin-right: 10px;
   color: #ffffff
 }
+/*Creador: lilberick*/

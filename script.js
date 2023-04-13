@@ -114,3 +114,4 @@ function cargarProblemas(){
       MathJax.typeset([document.getElementById('enunciado')]);
     });
 }
+/*creador: lilberick*/
