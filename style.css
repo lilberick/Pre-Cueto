@@ -2,9 +2,6 @@ body{
   /*background: linear-gradient(to bottom right, #ffffff, #e6e6e6);*/
   background: black; 
 }
-body::before {
-	color: white; /* Establece el color del texto */
-}
 /* Estilos para el título de la página */
 h1{
   font-size: 2em;
