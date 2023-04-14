@@ -1,6 +1,6 @@
 body{
   /*background: linear-gradient(to bottom right, #ffffff, #e6e6e6);*/
-  background: #ffffff;
+  background: black; 
 }
 /* Estilos para el título de la página */
 h1{
@@ -10,7 +10,7 @@ h1{
 }
 /* Estilos para las preguntas y respuestas */
 h2{
-	color: #333333;
+	color: white;
 	text-align: left;
 }
 p{
@@ -37,6 +37,14 @@ input[type="button"] {
 }
 input[type="button"]:hover {
   background-color: #0062cc;
+}
+.pregunta {
+  font-size: 1.5em;
+  margin: 1em 0;
+  color: #F5F5DC;
+  text-align: left;
+  font-family: sans-serif;
+  /*font-family: 'Roboto', sans-serif;*/
 }
 /* Estilos para el mensaje de respuesta */
 p[id^="mensaje"] {
@@ -68,7 +76,7 @@ p[id^="mensaje"] {
 	display: none;
 }
 .silabo ul li a{
-	color: #007acc;
+	color: #00FF00;
 }
 .silabo.active ul{
 	display: block;
@@ -124,8 +132,17 @@ p[id^="mensaje"] {
   display: flex;
   align-items: center;
 }
+#timer{
+	color: #00FF00;
+}
 #timerTotal {
   margin-right: 10px;
   color: #ffffff
+}
+.retroalimentacion{
+  color: #00FF00;
+}
+.respuesta{
+  color: white;
 }
 /*Creador: lilberick*/
