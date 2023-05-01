@@ -93,8 +93,8 @@ function cargarProblemas(){
       //const problemas = data.split('\n').map(row => row.split('","'));
 	  const problemas = data.split('\n').map(row => row.split('","').map(val => val.replace(/"/g, '')));
 	  const problemasSeleccionados = problemas.filter(row => row[1] === titulo);
-	  //const problemaAleatorio = problemasSeleccionados[Math.floor(Math.random() * problemasSeleccionados.length)];
-      const problemaAleatorio = problemasSeleccionados[Math.floor(Math.random() * problemasSeleccionados.length)];
+	  const problemaAleatorio = problemasSeleccionados[Math.floor(Math.random() * problemasSeleccionados.length)];
+	  //const problemaAleatorio = problemasSeleccionados[problemasSeleccionados.length-2];
       const [curso,tema,enunciado, respuesta,o1,o2,o3,o4,o5] = problemaAleatorio;
       const problemaDiv = document.getElementById('problema');
       problemaDiv.innerHTML = `
